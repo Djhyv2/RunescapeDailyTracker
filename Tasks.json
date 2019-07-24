@@ -1,0 +1,120 @@
+[
+  {
+    "Name": "Treasure Hunter",
+    "Time": "Reset",
+    "NotCompleted": "True",
+    "Enabled": "True",
+  },
+  {
+    "Name": "Wicked Hood",
+    "Time": "Reset",
+    "Location": "Edgeville",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Broad Arrowheads",
+    "Time": "Reset",
+    "NotCompleted": "True",
+    "Enabled": "True",
+    "SubTasks": [
+      {
+        "Location": "Bandit Camp"
+      },
+      {
+        "Location": "Taverly"
+      },
+      {
+        "Location": "Canifis"
+      }
+    ],
+  },
+  {
+    "Name": "Giant Oyster",
+    "Time": "MonthlyReset",
+    "Location": "Wizards Tower",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Circus",
+    "Time": "WeeklyReset",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Feathers of Maat",
+    "Time": "Hour24",
+    "Location": "Menaphos",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Toadflax & Bloodweed",
+    "Time": "Min80",
+    "NotCompleted": "True",
+    "Enabled": "True",
+    "SubTasks": [
+      {
+        "Location": "Trollheim"
+      },
+      {
+        "Location": "Falador"
+      },
+      {
+        "Location": "Canifis"
+      },
+      {
+        "Location": "Ardougne"
+      },
+      {
+        "Location": "Catherby"
+      },
+      {
+        "Location": "Wilderness Herb Patch"
+      },
+    ],
+  },
+  {
+    "Name": "Feathers",
+    "Time": "Hour60",
+    "NotCompleted": "True",
+    "Enabled": "True",
+    "SubTasks": [
+      {
+        "Location": "Lumbridge"
+      },
+      {
+        "Location": "Port Sarim"
+      },
+      {
+        "Location": "Al Kharid"
+      },
+      {
+        "Location": "Draynor"
+      },
+      {
+        "Location": "Ardougne"
+      },
+      {
+        "Location": "Relleka"
+      },
+      {
+        "Location": "Miscellania"
+      },
+      {
+        "Location": "Etceteria"
+      },
+      {
+        "Location": "Oo'glog"
+      },
+      {
+        "Location": "Menaphos"
+      },
+      {
+        "Location": "Shilo Village"
+      },
+    ],
+  },
+
+]
