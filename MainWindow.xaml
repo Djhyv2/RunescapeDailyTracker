@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RunescapeDailyTracker"
         mc:Ignorable="d"
-        Title="Runescape Daily Tracker" Height="768" Width="1280">
+        Title="Runescape Daily Tracker" Height="768" Width="1280" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -28,10 +28,19 @@
 
         <DockPanel Grid.Row="0" Grid.Column="1" Margin="10">
             <Label Content="Enabled Tasks:" Padding="10,0" HorizontalAlignment="Stretch" DockPanel.Dock="Top"></Label>
-            <ListBox Name="lstRoute" Grid.Row="0" Grid.Column="0" Margin="10" HorizontalContentAlignment="Stretch">
+            <ListBox Name="lstRoute" Grid.Row="0" Grid.Column="0" Margin="10" HorizontalContentAlignment="Stretch" >
+                <ListBox.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="10" Padding="0" Height="20" Text="{Binding Name}"></TextBlock>
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                    </GroupStyle>
+                </ListBox.GroupStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
+                        <Grid Height="20">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
@@ -39,9 +48,9 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
-                            <TextBlock Text="{Binding Name}" Grid.Column="0" Grid.Row="0" IsEnabled="{Binding NotCompleted}"></TextBlock>
-                            <Label Tag="{Binding Name}" Grid.Column="1" Grid.Row="0"></Label>
-                            <Button Tag="{Binding Name}" IsEnabled="{Binding NotCompleted}" HorizontalAlignment="Right" Width="100" Grid.Column="1" Grid.Row="0" Click="BtnComplete_Click">Complete</Button>
+                            <TextBlock Text="{Binding Name}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" FontSize="10" Padding="0" Height="20" IsEnabled="{Binding NotCompleted}"></TextBlock>
+                            <Label Tag="{Binding Name}" VerticalAlignment="Center" AutomationProperties.HelpText="{Binding Location}" Padding="0" FontSize="10" Height="20" Grid.Column="1" Grid.Row="0" Loaded="Label_Loaded"></Label><!--Using the HelpText as a custom property is a hacky work around, but I don't intend this to be used by a screenreader-->
+                            <Button Tag="{Binding Name}" VerticalAlignment="Center" AutomationProperties.HelpText="{Binding Location}" Padding="0" FontSize="10" Height="20" IsEnabled="{Binding NotCompleted}" HorizontalAlignment="Right" Width="100" Grid.Column="1" Grid.Row="0" Click="BtnComplete_Click">Complete</Button>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

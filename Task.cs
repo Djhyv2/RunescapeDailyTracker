@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Threading;
 
 namespace RunescapeDailyTracker
 {
     public enum Interval
     {
-        Reset, WeeklyReset, MonthlyReset, Hour24, Hour160, Hour60, Min80, Min270  
+        Sec5, Min2, Min80, Min270, Hour24, Reset, Hour60, Hour160, WeeklyReset, MonthlyReset  
     }
     public class Task : INotifyPropertyChanged
     {
@@ -17,6 +19,7 @@ namespace RunescapeDailyTracker
         private bool enabled;
         private List<Task> subTasks;
         private DateTime cooldownEnd;
+        private Thread timerThread;
 
         public string Name { get => name; set { if (value != name) { name = value; OnPropertyChanged("Name"); } } }
         public Interval Time { get => time; set => time = value; }
@@ -25,7 +28,8 @@ namespace RunescapeDailyTracker
         public bool Enabled { get => enabled; set => enabled = value; }
         public List<Task> SubTasks { get => subTasks; set => subTasks = value; }
         public DateTime CooldownEnd { get => cooldownEnd; set => cooldownEnd = value; }
-
+        [JsonIgnore]
+        public Thread TimerThread { get => timerThread; set => timerThread = value; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(String propertyName)
@@ -35,5 +39,7 @@ namespace RunescapeDailyTracker
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }//This method was copied almost exactly from StackOverflow, it enables the properties to be updated in the listbox
+
+
     }
 }

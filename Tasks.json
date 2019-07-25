@@ -6,6 +6,13 @@
     "Enabled": "True",
   },
   {
+    "Name": "Bork",
+    "Time": "Reset",
+    "Location":  "Edgeville",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
     "Name": "Wicked Hood",
     "Time": "Reset",
     "Location": "Edgeville",
@@ -13,26 +20,294 @@
     "Enabled": "True"
   },
   {
-    "Name": "Broad Arrowheads",
+    "Name": "Vis Wax",
     "Time": "Reset",
+    "Location": "Wizards Tower",
     "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Buying Broad Arrowheads",
+    "Time": "Reset",
     "Enabled": "True",
     "SubTasks": [
       {
-        "Location": "Bandit Camp"
+        "Location": "Bandit Camp",
+        "NotCompleted": "True",
       },
       {
-        "Location": "Taverly"
+        "Location": "Taverly",
+        "NotCompleted": "True",
       },
       {
-        "Location": "Canifis"
+        "Location": "Canifis",
+        "NotCompleted": "True",
+      },
+    ],
+  },
+  {
+    "Name": "Badit Duty Free",
+    "Time": "Reset",
+    "Location": "Bandit Camp",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Player Owned Farm",
+    "Time": "Hour24",
+    "Location": "Ardougne",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Farming Toadflax & Bloodweed",
+    "Time": "Min80",
+    "Enabled": "True",
+    "SubTasks": [
+      {
+        "Location": "Trollheim",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Falador",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Canifis",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Ardougne",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Catherby",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Wilderness Herb Patch",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Prifddinas",
+        "NotCompleted": "True"
       }
     ],
   },
   {
-    "Name": "Giant Oyster",
-    "Time": "MonthlyReset",
-    "Location": "Wizards Tower",
+    "Name": "Picking Coconuts",
+    "Time": "Min270",
+    "Enabled": "False",
+    "SubTasks": [
+      {
+        "Location": "Brimhaven",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Catherby",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Tree Gnome Stronghold",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Tree Gnome Village",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Lleyta",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Herblore Habitat",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Prifddinas",
+        "NotCompleted": "True"
+      },
+    ]
+  },
+  {
+    "Name": "Farming Grapevines",
+    "Time": "Min80",
+    "Enabled": "True",
+    "SubTasks": [
+      {
+        "Location": "Seer's Village",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Yanille",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Lumbridge",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Port Sarim",
+        "NotCompleted": "True"
+      },
+    ],
+  },
+  {
+    "Name": "Buying Runes",
+    "Time": "Reset",
+    "Enabled": "True",
+    "SubTasks": [
+      {
+        "Location": "Burthorpe",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Varrock",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Al Kharid",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Port Sarim",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Port Sarim",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Yanille",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Lunar Isle",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Ape Atoll",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Edgeville",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Edgeville",
+        "NotCompleted": "True"
+      }
+    ],
+  },
+  {
+    "Name": "Buying Yak-Hide",
+    "Time": "Reset",
+    "Location": "Jatizso",
+    "NotCompleted": "True",
+    "Enabled": "False"
+  },
+  {
+    "Name": "Buying Balls of Wool",
+    "Time": "Hour24",
+    "Location": "Neitiznot",
+    "NotCompleted": "True",
+    "Enabled": "False"
+  },
+  {
+    "Name": "Buying Feathers of Maat",
+    "Time": "Hour24",
+    "Location": "Menaphos",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Fresh Meat",
+    "Time": "Hour24",
+    "Location": "Oo'glog",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Making Potion Flasks",
+    "Time": "Reset",
+    "Location": "Oo'glog",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Daily Challenge",
+    "Time": "Reset",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Divine Location",
+    "Time": "Reset",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Buying Feathers",
+    "Time": "Hour60",
+    "Enabled": "True",
+    "SubTasks": [
+      {
+        "Location": "Lumbridge",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Port Sarim",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Al Kharid",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Draynor",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Ardougne",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Relleka",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Miscellania",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Etceteria",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Oo'glog",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Menaphos",
+        "NotCompleted": "True",
+      },
+      {
+        "Location": "Shilo Village",
+        "NotCompleted": "True",
+      },
+    ],
+  },
+  {
+    "Name": "Kingdom of Miscellania",
+    "Time": "Hour60",
+    "Location": "Miscellania",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Buying Vials of Water",
+    "Time": "Hour160",
+    "Location": "Burthorpe",
     "NotCompleted": "True",
     "Enabled": "True"
   },
@@ -43,78 +318,78 @@
     "Enabled": "True"
   },
   {
-    "Name": "Feathers of Maat",
-    "Time": "Hour24",
-    "Location": "Menaphos",
+    "Name": "Agoroth",
+    "Time": "WeeklyReset",
+    "Location": "Ashdale",
     "NotCompleted": "True",
     "Enabled": "True"
   },
   {
-    "Name": "Toadflax & Bloodweed",
-    "Time": "Min80",
+    "Name": "Familiarization",
+    "Time": "WeeklyReset",
     "NotCompleted": "True",
-    "Enabled": "True",
-    "SubTasks": [
-      {
-        "Location": "Trollheim"
-      },
-      {
-        "Location": "Falador"
-      },
-      {
-        "Location": "Canifis"
-      },
-      {
-        "Location": "Ardougne"
-      },
-      {
-        "Location": "Catherby"
-      },
-      {
-        "Location": "Wilderness Herb Patch"
-      },
-    ],
+    "Enabled": "False"
   },
   {
-    "Name": "Feathers",
-    "Time": "Hour60",
+    "Name": "Tears of Guthix",
+    "Time": "WeeklyReset",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Clan Citadel",
+    "Time": "WeeklyReset",
+    "Location": "Falador",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Meg",
+    "Time": "WeeklyReset",
+    "Location": "Port Sarim",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Giant Oyster",
+    "Time": "MonthlyReset",
+    "Location": "Wizards Tower",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "God Statues",
+    "Time": "MonthlyReset",
     "NotCompleted": "True",
     "Enabled": "True",
     "SubTasks": [
       {
-        "Location": "Lumbridge"
+        "Location": "Lumbridge",
+        "NotCompleted": "True"
       },
       {
-        "Location": "Port Sarim"
+        "Location": "Canifis",
+        "NotCompleted": "True"
       },
       {
-        "Location": "Al Kharid"
+        "Location": "Yanille",
+        "NotCompleted": "True"
       },
       {
-        "Location": "Draynor"
+        "Location": "Burthorpe",
+        "NotCompleted": "True"
       },
       {
-        "Location": "Ardougne"
-      },
-      {
-        "Location": "Relleka"
-      },
-      {
-        "Location": "Miscellania"
-      },
-      {
-        "Location": "Etceteria"
-      },
-      {
-        "Location": "Oo'glog"
-      },
-      {
-        "Location": "Menaphos"
-      },
-      {
-        "Location": "Shilo Village"
-      },
-    ],
+        "Location": "Prifddinas",
+        "NotCompleted": "True"
+      }
+    ]
   },
-
+  {
+    "Name": "Troll Invasion",
+    "Time": "MonthlyReset",
+    "Location": "Burthorpe",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
 ]
