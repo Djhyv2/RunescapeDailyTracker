@@ -24,7 +24,9 @@ namespace RunescapeDailyTracker
 
 
             ICollectionView routeCollectionView = CollectionViewSource.GetDefaultView(TaskTracker.EnabledTasks);
+            routeCollectionView.GroupDescriptions.Add(new PropertyGroupDescription("NotCompleted"));
             routeCollectionView.GroupDescriptions.Add(new PropertyGroupDescription("Location"));
+            routeCollectionView.SortDescriptions.Add(new SortDescription("NotCompleted", ListSortDirection.Descending));
             routeCollectionView.SortDescriptions.Add(new SortDescription("Location", ListSortDirection.Ascending));
             routeCollectionView.SortDescriptions.Add(new SortDescription("Time", ListSortDirection.Ascending));
             routeCollectionView.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
@@ -41,7 +43,7 @@ namespace RunescapeDailyTracker
         private void BtnComplete_Click(object sender, RoutedEventArgs e)
         {
             Task completedTask = TaskTracker.Complete(((Button)sender).Tag.ToString(), AutomationProperties.GetHelpText((Button)sender));//Sets cooldownEnd and completed status of task
-
+            CollectionViewSource.GetDefaultView(TaskTracker.EnabledTasks).Refresh();//Will move items between groups if needed
             StartClockThread(completedTask, ((Grid)((Button)sender).Parent).Children.OfType<Label>().First());
         }
 
@@ -58,6 +60,10 @@ namespace RunescapeDailyTracker
             }//Continually update label every second
 
             task.NotCompleted = true;//Reenabled task after cooldown
+            lstRoute.Dispatcher.Invoke((Action)(() =>
+            {
+                CollectionViewSource.GetDefaultView(TaskTracker.EnabledTasks).Refresh();//Will move items between groups if needed
+            }));
             lblTime.Dispatcher.Invoke((Action)(() =>
             {
                 lblTime.Content = "";

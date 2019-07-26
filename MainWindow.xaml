@@ -33,7 +33,7 @@
                     <GroupStyle>
                         <GroupStyle.HeaderTemplate>
                             <DataTemplate>
-                                <TextBlock FontSize="10" Padding="0" Height="20" Text="{Binding Name}"></TextBlock>
+                                <TextBlock DataContext="{Binding Items}" FontSize="10" Padding="0" Height="20" Text="{Binding Location}"></TextBlock>
                             </DataTemplate>
                         </GroupStyle.HeaderTemplate>
                     </GroupStyle>

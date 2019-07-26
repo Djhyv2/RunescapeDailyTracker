@@ -44,11 +44,11 @@ This can be used to test by renaming it to Tasks.json and placing it in the same
 Required Technique Locations:
 Methods: TaskTracker.cs Line 19 - The Initialize Method is used to fetch data from the Tasks.json file
 Classes: TaskTracker.cs contains the TaskTracker class
-Loops: MainWindow.xaml.cs Line 50 - While Loop to update labels
+Loops: MainWindow.xaml.cs Line 52 - While Loop to update labels
 Inheritance: Task.cs implements the INotifyPropertyChanged interface
 Strings, Arrays, or Lists: TaskTracker.cs Line 14-15 - Observable Collections of Tasks
-						   MainWindow.xaml.cs Line 55 - The countdown DateTime is converted into a String
+						   MainWindow.xaml.cs Line 57 - The countdown DateTime is converted into a String
 Model-View-Controller (MVC) software architecture: The MainWindow.xaml is the View, MainWindow.xaml.cs is the Controller, TaskTracker.cs is the Model
-MultiThreading: MainWindow.xaml.cs Line 69-71 - Creates a thread to control a countdown label
+MultiThreading: MainWindow.xaml.cs Line 75-77 - Creates a thread to control a countdown label
 Searching and Sorting, or LINQ: TaskTracker.cs Line 44 - LINQ used to select Enabled Tasks
 Exception Handling: TaskTracker.cs Line 38 - Try/Catch when opening the Tasks.json file
