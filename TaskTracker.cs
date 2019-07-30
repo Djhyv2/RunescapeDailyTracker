@@ -41,6 +41,25 @@ namespace RunescapeDailyTracker
                 return false;//Return false is open unsuccessful and display message
             }
 
+            foreach(Task task in Tasks)
+            {
+                if(false == task.NotCompleted && DateTime.Now > task.CooldownEnd)
+                {
+                    task.NotCompleted = true;
+                }
+
+                if (null != task.SubTasks)
+                {
+                    foreach (Task subTask in task.SubTasks)
+                    {
+                        if (false == subTask.NotCompleted && DateTime.Now > subTask.CooldownEnd)
+                        {
+                            subTask.NotCompleted = true;
+                        }
+                    }
+                }//Checks if subtasks have completed
+            }//Checks all tasks to see if cooldown finished since last closed
+
             enabledTasks = new ObservableCollection<Task>(from task in Tasks where true == task.Enabled && null == task.SubTasks select task);//Gets all enabled tasks without subtasks
             foreach (Task task in Tasks)
             {

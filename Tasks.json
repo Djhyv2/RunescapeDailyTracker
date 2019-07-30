@@ -3,12 +3,12 @@
     "Name": "Treasure Hunter",
     "Time": "Reset",
     "NotCompleted": "True",
-    "Enabled": "True",
+    "Enabled": "True"
   },
   {
     "Name": "Bork",
     "Time": "Reset",
-    "Location":  "Edgeville",
+    "Location": "Edgeville",
     "NotCompleted": "True",
     "Enabled": "True"
   },
@@ -33,17 +33,17 @@
     "SubTasks": [
       {
         "Location": "Bandit Camp",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Taverly",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Canifis",
-        "NotCompleted": "True",
-      },
-    ],
+        "NotCompleted": "True"
+      }
+    ]
   },
   {
     "Name": "Badit Duty Free",
@@ -92,7 +92,7 @@
         "Location": "Prifddinas",
         "NotCompleted": "True"
       }
-    ],
+    ]
   },
   {
     "Name": "Picking Coconuts",
@@ -126,7 +126,7 @@
       {
         "Location": "Prifddinas",
         "NotCompleted": "True"
-      },
+      }
     ]
   },
   {
@@ -149,8 +149,8 @@
       {
         "Location": "Port Sarim",
         "NotCompleted": "True"
-      },
-    ],
+      }
+    ]
   },
   {
     "Name": "Buying Runes",
@@ -174,7 +174,7 @@
         "NotCompleted": "True"
       },
       {
-        "Location": "Port Sarim",
+        "Location": "Void Knight Outpost",
         "NotCompleted": "True"
       },
       {
@@ -190,14 +190,14 @@
         "NotCompleted": "True"
       },
       {
-        "Location": "Edgeville",
+        "Location": "Mage Arena",
         "NotCompleted": "True"
       },
       {
         "Location": "Edgeville",
         "NotCompleted": "True"
       }
-    ],
+    ]
   },
   {
     "Name": "Buying Yak-Hide",
@@ -253,49 +253,49 @@
     "SubTasks": [
       {
         "Location": "Lumbridge",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Port Sarim",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Al Kharid",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Draynor",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Ardougne",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Relleka",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Miscellania",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Etceteria",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Oo'glog",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Menaphos",
-        "NotCompleted": "True",
+        "NotCompleted": "True"
       },
       {
         "Location": "Shilo Village",
-        "NotCompleted": "True",
-      },
-    ],
+        "NotCompleted": "True"
+      }
+    ]
   },
   {
     "Name": "Kingdom of Miscellania",
@@ -332,6 +332,21 @@
   },
   {
     "Name": "Tears of Guthix",
+    "Time": "WeeklyReset",
+    "Location": "Juna's Cavern",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Herby Werby",
+    "Location": "Anachronia",
+    "Time": "WeeklyReset",
+    "NotCompleted": "True",
+    "Enabled": "True"
+  },
+  {
+    "Name": "Shattered Worlds",
+    "Location": "Lumbridge",
     "Time": "WeeklyReset",
     "NotCompleted": "True",
     "Enabled": "True"
