@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:RunescapeDailyTracker"
         mc:Ignorable="d"
         Title="Runescape Daily Tracker" Height="768" Width="1280" Closing="Window_Closing">
+    <Window.Resources>
+        <local:CompletedOrRecompletableConverter x:Key="CompletedOrRecompletableConverter"></local:CompletedOrRecompletableConverter>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -50,7 +53,7 @@
                             </Grid.RowDefinitions>
                             <TextBlock Text="{Binding Name}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" FontSize="10" Padding="0" Height="20" IsEnabled="{Binding NotCompleted}"></TextBlock>
                             <Label Tag="{Binding Name}" VerticalAlignment="Center" AutomationProperties.HelpText="{Binding Location}" Padding="0" FontSize="10" Height="20" Grid.Column="1" Grid.Row="0" Loaded="Label_Loaded"></Label><!--Using the HelpText as a custom property is a hacky work around, but I don't intend this to be used by a screenreader-->
-                            <Button Tag="{Binding Name}" VerticalAlignment="Center" AutomationProperties.HelpText="{Binding Location}" Padding="0" FontSize="10" Height="20" IsEnabled="{Binding NotCompleted}" HorizontalAlignment="Right" Width="100" Grid.Column="1" Grid.Row="0" Click="BtnComplete_Click">Complete</Button>
+                            <Button Tag="{Binding Name}" VerticalAlignment="Center" AutomationProperties.HelpText="{Binding Location}" Padding="0" FontSize="10" Height="20" IsEnabled="{Binding Converter={StaticResource CompletedOrRecompletableConverter}}" HorizontalAlignment="Right" Width="100" Grid.Column="1" Grid.Row="0" Click="BtnComplete_Click">Complete</Button>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

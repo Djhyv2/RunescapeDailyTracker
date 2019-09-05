@@ -13,6 +13,7 @@ namespace RunescapeDailyTracker
 {
     public partial class MainWindow : Window
     {
+        System.Timers.Timer timer;
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +32,10 @@ namespace RunescapeDailyTracker
             routeCollectionView.SortDescriptions.Add(new SortDescription("Time", ListSortDirection.Ascending));
             routeCollectionView.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
             lstRoute.ItemsSource = routeCollectionView;//Binds enabled tasks to sorted and grouped list
+
+            timer = new System.Timers.Timer();
+            timer.Interval = 1000;
+            timer.Start();//Initializes timer
         }
 
         private void ChkTask_Click(object sender, RoutedEventArgs e)
@@ -44,37 +49,32 @@ namespace RunescapeDailyTracker
         {
             Task completedTask = TaskTracker.Complete(((Button)sender).Tag.ToString(), AutomationProperties.GetHelpText((Button)sender));//Sets cooldownEnd and completed status of task
             CollectionViewSource.GetDefaultView(TaskTracker.EnabledTasks).Refresh();//Will move items between groups if needed
-            StartClockThread(completedTask, ((Grid)((Button)sender).Parent).Children.OfType<Label>().First());
+            Label label = ((Grid)((Button)sender).Parent).Children.OfType<Label>().First();
+            timer.Elapsed += new System.Timers.ElapsedEventHandler((unusedSender, unusedE) => Clock(label, completedTask));//Adds handler to timer
         }
 
         private void Clock(Label lblTime, Task task)
         {
-            while (task.CooldownEnd > DateTime.Now)
+            if (task.CooldownEnd > DateTime.Now)
             {
                 lblTime.Dispatcher.Invoke((Action)(() =>
                 {
                     TimeSpan difference = task.CooldownEnd.Subtract(DateTime.Now);
                     lblTime.Content = (0 != difference.Days ? difference.Days.ToString() + "d " : "") + (0 != difference.Hours ? difference.Hours.ToString() + ":" : "") + difference.ToString(@"mm\:ss");//Print difference with optional days and hours
                 }));
-                Thread.Sleep(1000);
             }//Continually update label every second
-
-            task.NotCompleted = true;//Reenabled task after cooldown
-            lstRoute.Dispatcher.Invoke((Action)(() =>
+            else
             {
-                CollectionViewSource.GetDefaultView(TaskTracker.EnabledTasks).Refresh();//Will move items between groups if needed
-            }));
-            lblTime.Dispatcher.Invoke((Action)(() =>
-            {
-                lblTime.Content = "";
-            }));
-        }
-
-        private void StartClockThread(Task task, Label label)
-        {
-            task.TimerThread = new Thread(() => Clock(label, task));//Passes label and new task cooldown to thread
-            task.TimerThread.IsBackground = true;
-            task.TimerThread.Start();//Creates and Starts Thread to run timer, background to allow for graceful exit
+                task.NotCompleted = true;//Reenabled task after cooldown
+                lstRoute.Dispatcher.Invoke((Action)(() =>
+                {
+                    CollectionViewSource.GetDefaultView(TaskTracker.EnabledTasks).Refresh();//Will move items between groups if needed
+                }));
+                lblTime.Dispatcher.Invoke((Action)(() =>
+                {
+                    lblTime.Content = "";
+                }));
+            }
         }
 
         private void Label_Loaded(object sender, RoutedEventArgs e)
@@ -82,7 +82,7 @@ namespace RunescapeDailyTracker
             Task associatedTask = (from task in TaskTracker.EnabledTasks where ((Label)sender).Tag.ToString() == task.Name && (AutomationProperties.GetHelpText((Label)sender) == task.Location || String.IsNullOrEmpty(task.Location) ) select task).FirstOrDefault();
             if (null != associatedTask && null != associatedTask.CooldownEnd && associatedTask.CooldownEnd > DateTime.Now)
             {
-                StartClockThread(associatedTask, (Label)sender);
+                timer.Elapsed += new System.Timers.ElapsedEventHandler((unusedSender, unusedE) => Clock((Label)sender, associatedTask));
             }//Starts clock thread if task has an active cooldown
         }//Start time thread on loaded
 
@@ -90,5 +90,7 @@ namespace RunescapeDailyTracker
         {
             e.Cancel = !TaskTracker.Save();//Stops cancel if save unsuccessful
         }
+
+
     }
 }

@@ -8,7 +8,8 @@ namespace RunescapeDailyTracker
 {
     public enum Interval
     {
-        Sec5, Min2, Min80, Min270, Hour24, Reset, Hour60, Hour160, WeeklyReset, MonthlyReset  
+        Sec5, Min2, Min80, Min270, Hour24, Reset, Hour60, Hour160, WeeklyReset, MonthlyReset, ClanReset,
+        Hour48
     }
     public class Task : INotifyPropertyChanged
     {
@@ -20,6 +21,7 @@ namespace RunescapeDailyTracker
         private List<Task> subTasks;
         private DateTime cooldownEnd;
         private Thread timerThread;
+        private bool recompletable;
 
         public string Name { get => name; set { if (value != name) { name = value; OnPropertyChanged("Name"); } } }
         public Interval Time { get => time; set => time = value; }
@@ -30,6 +32,7 @@ namespace RunescapeDailyTracker
         public DateTime CooldownEnd { get => cooldownEnd; set => cooldownEnd = value; }
         [JsonIgnore]
         public Thread TimerThread { get => timerThread; set => timerThread = value; }
+        public bool Recompletable { get => recompletable; set => recompletable = value; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(String propertyName)

@@ -69,7 +69,8 @@ namespace RunescapeDailyTracker
                     {
                         enabledTasks.Add(subTask);
                         subTask.Name = task.Name;
-                        subTask.Time = task.Time;//Propogate values to subtasks
+                        subTask.Time = task.Time;
+                        subTask.Recompletable = task.Recompletable;//Propogate values to subtasks
                     }
                 }
             }//Adds all subtasks to list being shown
@@ -122,6 +123,12 @@ namespace RunescapeDailyTracker
                     break;
                 case Interval.Sec5:
                     completedTask.CooldownEnd = DateTime.Now.AddSeconds(5);//Cooldown ends in 5 seconds
+                    break;
+                case Interval.ClanReset:
+                    completedTask.CooldownEnd = DateTime.UtcNow.Date.AddDays((DayOfWeek.Saturday - DateTime.UtcNow.DayOfWeek + 7) % 7 + 1).ToLocalTime().AddHours(21).AddMinutes(40);// Sets time to next Sunday at 9:40pm UTC
+                    break;
+                case Interval.Hour48:
+                    completedTask.CooldownEnd = DateTime.Now.AddDays(2);//Cooldown ends in 48 hours
                     break;
             }//Runescape is based in UTC timezone
 

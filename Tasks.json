@@ -3,33 +3,38 @@
     "Name": "Treasure Hunter",
     "Time": "Reset",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "False"
   },
   {
     "Name": "Bork",
     "Time": "Reset",
     "Location": "Edgeville",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "False"
   },
   {
     "Name": "Wicked Hood",
     "Time": "Reset",
     "Location": "Edgeville",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "False"
   },
   {
     "Name": "Vis Wax",
     "Time": "Reset",
     "Location": "Wizards Tower",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "False"
   },
   {
     "Name": "Buying Broad Arrowheads",
     "Time": "Reset",
     "Enabled": "True",
+    "Recompletable": "False",
     "SubTasks": [
       {
         "Location": "Bandit Camp",
@@ -50,19 +55,30 @@
     "Time": "Reset",
     "Location": "Bandit Camp",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "False"
+  },
+  {
+    "Name": "Raffle & Gilly",
+    "Time": "Reset",
+    "Location": "Burthorpe",
+    "NotCompleted": "True",
+    "Enabled": "True",
+    "Recompletable": "False"
   },
   {
     "Name": "Player Owned Farm",
     "Time": "Hour24",
     "Location": "Ardougne",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "True"
   },
   {
-    "Name": "Farming Toadflax & Bloodweed",
+    "Name": "Farming Arbuck & Bloodweed",
     "Time": "Min80",
     "Enabled": "True",
+    "Recompletable": "False",
     "SubTasks": [
       {
         "Location": "Trollheim",
@@ -98,6 +114,7 @@
     "Name": "Picking Coconuts",
     "Time": "Min270",
     "Enabled": "False",
+    "Recompletable": "False",
     "SubTasks": [
       {
         "Location": "Brimhaven",
@@ -133,6 +150,7 @@
     "Name": "Farming Grapevines",
     "Time": "Min80",
     "Enabled": "True",
+    "Recompletable": "False",
     "SubTasks": [
       {
         "Location": "Seer's Village",
@@ -156,6 +174,7 @@
     "Name": "Buying Runes",
     "Time": "Reset",
     "Enabled": "True",
+    "Recompletable": "False",
     "SubTasks": [
       {
         "Location": "Burthorpe",
@@ -204,41 +223,54 @@
     "Time": "Reset",
     "Location": "Jatizso",
     "NotCompleted": "True",
-    "Enabled": "False"
+    "Enabled": "False",
+    "Recompletable": "False"
   },
   {
     "Name": "Buying Balls of Wool",
     "Time": "Hour24",
     "Location": "Neitiznot",
     "NotCompleted": "True",
-    "Enabled": "False"
+    "Enabled": "False",
+    "Recompletable": "True"
   },
   {
     "Name": "Buying Feathers of Maat",
     "Time": "Hour24",
     "Location": "Menaphos",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "True"
   },
   {
     "Name": "Fresh Meat",
     "Time": "Hour24",
     "Location": "Oo'glog",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "True"
   },
   {
     "Name": "Making Potion Flasks",
     "Time": "Reset",
-    "Location": "Oo'glog",
-    "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Subtasks": [
+      {
+        "Location": "Oo'glog",
+        "NotCompleted": "True"
+      },
+      {
+        "Location": "Prifddinas",
+        "NotCompleted": "True"
+      }
+    ]
   },
   {
     "Name": "Daily Challenge",
     "Time": "Reset",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "False"
   },
   {
     "Name": "Divine Location",
@@ -247,9 +279,31 @@
     "Enabled": "True"
   },
   {
+    "Name": "Ectofungus Slime",
+    "Time": "Reset",
+    "Location": "Canifis",
+    "NotCompleted": true,
+    "Enabled": true
+  },
+  {
+    "Name": "Reaper Task",
+    "Time": "Reset",
+    "NotCompleted": true,
+    "Enabled": true
+  },
+  {
+    "Name": "Ports",
+    "Time": "Reset",
+    "Location": "Port Sarim",
+    "NotCompleted": "True",
+    "Enabled": "True",
+    "Recompletable": "True"
+  },
+  {
     "Name": "Buying Feathers",
     "Time": "Hour60",
     "Enabled": "True",
+    "Recompletable": "True",
     "SubTasks": [
       {
         "Location": "Lumbridge",
@@ -302,94 +356,15 @@
     "Time": "Hour60",
     "Location": "Miscellania",
     "NotCompleted": "True",
-    "Enabled": "True"
+    "Enabled": "True",
+    "Recompletable": "True"
   },
   {
     "Name": "Buying Vials of Water",
     "Time": "Hour160",
-    "Location": "Burthorpe",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Circus",
-    "Time": "WeeklyReset",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Agoroth",
-    "Time": "WeeklyReset",
-    "Location": "Ashdale",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Familiarization",
-    "Time": "WeeklyReset",
-    "NotCompleted": "True",
-    "Enabled": "False"
-  },
-  {
-    "Name": "Tears of Guthix",
-    "Time": "WeeklyReset",
-    "Location": "Juna's Cavern",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Herby Werby",
-    "Location": "Anachronia",
-    "Time": "WeeklyReset",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Shattered Worlds",
-    "Location": "Lumbridge",
-    "Time": "WeeklyReset",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Clan Citadel",
-    "Time": "WeeklyReset",
-    "Location": "Falador",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Meg",
-    "Time": "WeeklyReset",
-    "Location": "Port Sarim",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "Giant Oyster",
-    "Time": "MonthlyReset",
-    "Location": "Wizards Tower",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
-  {
-    "Name": "God Statues",
-    "Time": "MonthlyReset",
-    "NotCompleted": "True",
     "Enabled": "True",
-    "SubTasks": [
-      {
-        "Location": "Lumbridge",
-        "NotCompleted": "True"
-      },
-      {
-        "Location": "Canifis",
-        "NotCompleted": "True"
-      },
-      {
-        "Location": "Yanille",
-        "NotCompleted": "True"
-      },
+    "Recompletable": "True",
+    "Subtasks": [
       {
         "Location": "Burthorpe",
         "NotCompleted": "True"
@@ -397,14 +372,148 @@
       {
         "Location": "Prifddinas",
         "NotCompleted": "True"
+      },
+      {
+        "Location": "Shilo Village",
+        "NotCompleted": "True"
       }
     ]
   },
   {
-    "Name": "Troll Invasion",
-    "Time": "MonthlyReset",
-    "Location": "Burthorpe",
-    "NotCompleted": "True",
-    "Enabled": "True"
-  },
+    "Name": "Brewing Greenman's Ale",
+    "Time": "Hour48",
+    "Enabled": "True",
+    "Recompletable": "True",
+    "Subtasks": [
+        {
+          "Location": "Canifis",
+          "NotCompleted": "True"
+        },
+        {
+          "Location": "Keldagrim",
+          "NotCompleted": "True"
+        }
+      ]
+    },
+    {
+      "Name": "Circus",
+      "Time": "WeeklyReset",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Agoroth",
+      "Time": "WeeklyReset",
+      "Location": "Ashdale",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Familiarization",
+      "Time": "WeeklyReset",
+      "NotCompleted": "True",
+      "Enabled": "False",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Tears of Guthix",
+      "Time": "WeeklyReset",
+      "Location": "Juna's Cavern",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Herby Werby",
+      "Location": "Anachronia",
+      "Time": "WeeklyReset",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Shattered Worlds",
+      "Location": "Lumbridge",
+      "Time": "WeeklyReset",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Clan Citadel",
+      "Time": "ClanReset",
+      "Location": "Falador",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Meg",
+      "Time": "WeeklyReset",
+      "Location": "Port Sarim",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Giant Oyster",
+      "Time": "MonthlyReset",
+      "Location": "Wizards Tower",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "God Statues",
+      "Time": "MonthlyReset",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False",
+      "SubTasks": [
+        {
+          "Location": "Lumbridge",
+          "NotCompleted": "True"
+        },
+        {
+          "Location": "Canifis",
+          "NotCompleted": "True"
+        },
+        {
+          "Location": "Yanille",
+          "NotCompleted": "True"
+        },
+        {
+          "Location": "Burthorpe",
+          "NotCompleted": "True"
+        },
+        {
+          "Location": "Prifddinas",
+          "NotCompleted": "True"
+        }
+      ]
+    },
+    {
+      "Name": "Troll Invasion",
+      "Time": "MonthlyReset",
+      "Location": "Burthorpe",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Solomon's Store Freebie",
+      "Time": "MonthlyReset",
+      "NotCompleted": "False",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
+      "Name": "Test",
+      "Time": "Sec5",
+      "NotCompleted": "False",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
 ]
