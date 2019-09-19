@@ -442,6 +442,14 @@
       "Recompletable": "False"
     },
     {
+      "Name": "Aquarium",
+      "Location": "Taverly",
+      "Time": "WeeklyReset",
+      "NotCompleted": "True",
+      "Enabled": "True",
+      "Recompletable": "False"
+    },
+    {
       "Name": "Clan Citadel",
       "Time": "ClanReset",
       "Location": "Falador",
@@ -515,5 +523,5 @@
       "NotCompleted": "False",
       "Enabled": "True",
       "Recompletable": "False"
-    },
+    }
 ]

@@ -48,6 +48,7 @@ namespace RunescapeDailyTracker
         private void BtnComplete_Click(object sender, RoutedEventArgs e)
         {
             Task completedTask = TaskTracker.Complete(((Button)sender).Tag.ToString(), AutomationProperties.GetHelpText((Button)sender));//Sets cooldownEnd and completed status of task
+            TaskTracker.Save();//Saves after every update
             CollectionViewSource.GetDefaultView(TaskTracker.EnabledTasks).Refresh();//Will move items between groups if needed
             Label label = ((Grid)((Button)sender).Parent).Children.OfType<Label>().First();
             timer.Elapsed += new System.Timers.ElapsedEventHandler((unusedSender, unusedE) => Clock(label, completedTask));//Adds handler to timer
