@@ -1,4 +1,5 @@
 const { ipcMain } = require('electron');
+const path = require('path');
 const fs = require('fs');
 const Moment = require('moment');
 
@@ -11,7 +12,7 @@ module.exports = class TaskServer
 
     start()
     {
-        this.tasks = JSON.parse(fs.readFileSync('./tasks.json'));
+        this.loadTasks();
 
         //Custom IPC message is sent from client after all clientside JS has loaded
         ipcMain.on('finishedLoad', () =>
@@ -99,7 +100,7 @@ module.exports = class TaskServer
                 console.log(`Invalid Time for ${task}`);
             }
 
-            fs.writeFileSync('./tasks.json', JSON.stringify(this.tasks));
+            this.saveTasks();
             this.mainWindow.webContents.send('taskComplete', this.tasks);
         });
 
@@ -108,7 +109,7 @@ module.exports = class TaskServer
         {
             const task = this.findJsonTask(toggledTask);
             task.enabled = !task.enabled;
-            fs.writeFileSync('./tasks.json', JSON.stringify(this.tasks));
+            this.saveTasks();
             this.mainWindow.webContents.send('taskToggle', this.tasks);
         });
     }
@@ -124,5 +125,17 @@ module.exports = class TaskServer
         }
         const jsonSubtask = jsonTask.subtasks.find((subtask) => subtask.location === escapedTask.location);
         return jsonSubtask;
+    }
+
+    //Load tasks from json file
+    loadTasks()
+    {
+        this.tasks = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'tasks.json')));
+    }
+
+    //Save tasks to json file
+    saveTasks()
+    {
+        fs.writeFileSync(path.resolve(__dirname, 'tasks.json'), JSON.stringify(this.tasks));
     }
 };

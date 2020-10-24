@@ -1,6 +1,8 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const Server = require('./server');
 
+process.env.NODE_ENV = 'production';
+
 //Creates window from html file and creates menubar
 app.on('ready', () =>
 {
