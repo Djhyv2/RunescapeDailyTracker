@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Runescape Daily Tracker</title>
+</head>
+
+<body>
+    <div class='container-fluid'>
+        <div class='row'>
+            <h1 class='col text-center'>Runescape Daily Tracker</h1>
+        </div>
+        <div class='row'>
+            <div class='col-6'>
+                <script id='templateCheckbox' type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li class='list-group-item'>
+                        <div class='form-check'>
+                            <input type='checkbox' class='form-check-input' onclick="toggleTask('{{escape this.location}}','{{escape this.name}}')"  {{#if this.enabled}}checked{{/if}}></input>
+                            <label class='form-check-label'>{{this.name}}</label>
+                        </div>
+                        <ul class='list-group'>
+                            {{#each subtasks}}
+                            <li class='list-group-item'>
+                                <div class='form-check'>
+                                    <input type='checkbox' class='form-check-input' onclick="toggleTask('{{escape this.location}}','{{escape ../name}}')" {{#if this.enabled}}checked{{/if}}></input>
+                                    <label class='form-check-label'>{{this.location}} {{../this.name}}</label>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </script>
+                <ul class='list-group' id='lstCheckboxes'></ul>
+            </div>
+            <div class='col-6'>
+                <script id='templateTasks' type='text/x-handlebars-template'>
+                    {{#each this}}
+                    <li class='list-group-item {{#isComplete this.tasks.[0].complete}}bg-light{{/isComplete}}'>
+                        {{this.location}}
+                        <ul class='list-group'>
+                            {{#each this.tasks}}
+                            <li class='list-group-item {{#isComplete this.complete}}bg-light{{/isComplete}}'>
+                                {{this.name}}
+                                <span class='float-right'>
+                                    <label data-location='{{escape this.location}}' data-name='{{escape this.name}}'></label>
+                                    {{#isRecompletableOrIncomplete this}}<button class='btn btn-secondary btn-sm ml-2' onclick="completeTask('{{escape this.location}}','{{escape this.name}}')">Complete</button>{{/isRecompletableOrIncomplete}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </script>
+                <ul class='list-group' id='lstIncompleteTasks'></ul>
+                <ul class='list-group' id='lstCompleteTasks'></ul>
+            </div>
+        </div>
+    </div>
+    <script src="./taskList.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script>
+        const $ = jQuery = require("jquery");
+        require('bootstrap');
+        require('popper.js');
+    </script>
+</body>
+
+</html>
