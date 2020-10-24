@@ -101,7 +101,7 @@ namespace RunescapeDailyTracker
                     completedTask.CooldownEnd = DateTime.UtcNow.Date.AddDays((DayOfWeek.Tuesday - DateTime.UtcNow.DayOfWeek + 7) % 7 + 1).ToLocalTime();//Calculates the next UTC midnight on a Wednesday and converts to localtime
                     break;
                 case Interval.MonthlyReset:
-                    completedTask.CooldownEnd = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.AddMonths(1).Month, 1).ToLocalTime();//Converts UTC midnight of first of next month to localtime
+                    completedTask.CooldownEnd = new DateTime(DateTime.UtcNow.AddMonths(1).Year, DateTime.UtcNow.AddMonths(1).Month, 1).ToLocalTime();//Converts UTC midnight of first of next month to localtime
                     break;
                 case Interval.Hour24:
                     completedTask.CooldownEnd = DateTime.Now.AddDays(1);//Cooldown ends in 24 hours
