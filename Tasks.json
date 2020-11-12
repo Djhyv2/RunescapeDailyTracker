@@ -5,7 +5,7 @@
         "recompletable": false,
         "location": "Wizard's Tower",
         "enabled": true,
-        "complete": "0"
+        "complete": "2020-10-26T00:00:00.000Z"
     },
     {
         "name": "Treasure Hunter",
@@ -13,7 +13,7 @@
         "recompletable": false,
         "location": "Any",
         "enabled": true,
-        "complete": "0"
+        "complete": "2020-10-26T00:00:00.000Z"
     },
     {
         "name": "Daily Challenge",
@@ -28,7 +28,7 @@
         "interval": "DailyReset",
         "recompletable": false,
         "location": "Any",
-        "enabled": true,
+        "enabled": false,
         "complete": "0"
     },
     {
@@ -45,7 +45,7 @@
         "recompletable": false,
         "location": "Port Sarim",
         "enabled": true,
-        "complete": "0"
+        "complete": "2020-10-26T00:00:00.000Z"
     },
     {
         "name": "Clan Citadel",
@@ -60,6 +60,14 @@
         "interval": "MonthlyReset",
         "recompletable": false,
         "location": "Any",
+        "enabled": true,
+        "complete": "2020-11-01T00:00:00.000Z"
+    },
+    {
+        "name": "Traveling Merchant",
+        "interval": "DailyReset",
+        "recompletable": false,
+        "location": "Ardougne",
         "enabled": true,
         "complete": "0"
     },
@@ -94,7 +102,7 @@
             {
                 "location": "Varrock",
                 "enabled": true,
-                "complete": "0"
+                "complete": "2020-10-26T00:00:00.000Z"
             },
             {
                 "location": "Al Kharid",
@@ -104,12 +112,12 @@
             {
                 "location": "Port Sarim",
                 "enabled": true,
-                "complete": "0"
+                "complete": "2020-10-26T00:00:00.000Z"
             },
             {
                 "location": "Void Knight Outpost",
                 "enabled": true,
-                "complete": "0"
+                "complete": "2020-10-26T00:00:00.000Z"
             },
             {
                 "location": "Yanille",
@@ -136,8 +144,8 @@
     },
     {
         "name": "Buying Fresh Meat",
-        "interval": "1Day",
-        "recompletable": true,
+        "interval": "DailyReset",
+        "recompletable": false,
         "location": "Oo'glog",
         "enabled": true,
         "complete": "0"
@@ -155,7 +163,7 @@
             {
                 "location": "Port Sarim",
                 "enabled": true,
-                "complete": "0"
+                "complete": "2020-10-27T13:25:53.809Z"
             },
             {
                 "location": "Miscellania",
@@ -216,7 +224,7 @@
     {
         "name": "Buying Vials of Water and Bomb Vials",
         "interval": "160Hour",
-        "recompletable": false,
+        "recompletable": true,
         "subtasks": [
             {
                 "location": "Taverly",
@@ -282,7 +290,8 @@
         "location": "Miscellania",
         "enabled": true,
         "complete": "0"
-    },{
+    },
+    {
         "name": "Farming Grapevines",
         "interval": "80Min",
         "recompletable": false,
@@ -387,17 +396,17 @@
             {
                 "location": "Varrock",
                 "enabled": true,
-                "complete": "0"
+                "complete": "2020-10-25T03:11:51.460Z"
             },
             {
-                "location": "Rimmington",
+                "location": "Port Sarim",
                 "enabled": true,
-                "complete": "0"
+                "complete": "2020-10-25T02:44:15.717Z"
             },
             {
                 "location": "Ardougne",
                 "enabled": true,
-                "complete": "0"
+                "complete": "2020-10-25T03:14:39.685Z"
             },
             {
                 "location": "Etceteria",
@@ -456,20 +465,28 @@
         "enabled": true
     },
     {
+        "name": "Picking Crystal Tree Blossoms",
+        "interval": "1Day",
+        "recompletable": false,
+        "location": "Prifddinas",
+        "enabled": false,
+        "complete": "0"
+    },
+    {
         "name": "Player Owned Farm",
         "interval": "1Day",
         "recompletable": true,
         "location": "Ardougne",
-        "enabled": true,
+        "enabled": false,
         "complete": "0"
     },
     {
         "name": "Ranch Out Of Time",
         "interval": "1Day",
         "recompletable": true,
-        "location": "Anachronia",
+        "location": "Ardougne",
         "enabled": true,
-        "complete": "0"
+        "complete": "2020-10-26T02:09:43.228Z"
     },
     {
         "name": "Wicked Hood",
@@ -543,7 +560,7 @@
         "recompletable": false,
         "location": "Port Sarim",
         "enabled": true,
-        "complete": "0"
+        "complete": "2020-10-28T00:00:00.000Z"
     },
     {
         "name": "Giant Oyster",
@@ -635,6 +652,14 @@
         "complete": "0"
     },
     {
+        "name": "Anachronia Totems",
+        "interval": "WeeklyReset",
+        "recompletable": false,
+        "location": "Anachronia",
+        "enabled": false,
+        "complete": "0"
+    },
+    {
         "name": "Effigy Incubator",
         "interval": "WeeklyReset",
         "recompletable": false,
@@ -643,16 +668,16 @@
         "complete": "0"
     },
     {
-        "name": "Memory of Nomad",
-        "interval": "WeeklyReset",
-        "recompletable": false,
-        "location": "Any",
-        "enabled": false,
+        "name": "Recharging Rings of Wealth",
+        "interval": "1Day",
+        "recompletable": true,
+        "location": "Varrock",
+        "enabled": true,
         "complete": "0"
     },
     {
         "name": "Invention Machines",
-        "interval": "24Hour",
+        "interval": "1Day",
         "recompletable": true,
         "location": "Falador",
         "enabled": false,
@@ -682,7 +707,6 @@
         "enabled": false,
         "complete": "0"
     },
-    
     {
         "name": "Picking Morchella Mushrooms",
         "interval": "4Hour",
@@ -721,12 +745,13 @@
     },
     {
         "name": "Transmute Onyx Dust",
-        "interval": "24Hour",
+        "interval": "1Day",
         "recompletable": true,
         "location": "Any",
         "enabled": false,
         "complete": "0"
-    },{
+    },
+    {
         "name": "Fletch Bakriminel Bolts",
         "interval": "6Hour",
         "recompletable": false,
