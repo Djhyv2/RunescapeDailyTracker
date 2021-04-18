@@ -78,6 +78,9 @@ module.exports = class TaskServer
             case '1Day':
                 task.complete = Moment.utc().add({ days: 1 }).toISOString();
                 break;
+            case '20Hour':
+                task.complete = Moment.utc().add({ hours: 20 }).toISOString();
+                break;
             case '8Hour':
                 task.complete = Moment.utc().add({ hours: 8 }).toISOString();
                 break;

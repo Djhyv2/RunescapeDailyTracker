@@ -5,7 +5,7 @@
         "recompletable": false,
         "location": "Wizard's Tower",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-26T00:00:00.000Z"
     },
     {
         "name": "Treasure Hunter",
@@ -13,7 +13,7 @@
         "recompletable": false,
         "location": "Any",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-25T00:00:00.000Z"
     },
     {
         "name": "Daily Challenge",
@@ -21,7 +21,7 @@
         "recompletable": false,
         "location": "Any",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-21T00:00:00.000Z"
     },
     {
         "name": "Reaper Task",
@@ -29,7 +29,7 @@
         "recompletable": false,
         "location": "Any",
         "enabled": true,
-        "complete": "2020-11-18T00:00:00.000Z"
+        "complete": "2020-12-19T00:00:00.000Z"
     },
     {
         "name": "Divine Location",
@@ -37,23 +37,23 @@
         "recompletable": false,
         "location": "Burthorpe",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-25T00:00:00.000Z"
     },
     {
         "name": "Player Owned Ports",
         "interval": "8Hour",
-        "recompletable": false,
+        "recompletable": true,
         "location": "Port Sarim",
         "enabled": true,
-        "complete": "2020-12-01T07:26:29.548Z"
+        "complete": "2020-12-25T09:56:12.234Z"
     },
     {
         "name": "Gorajo Card",
         "interval": "DailyReset",
         "recompletable": false,
         "location": "Prifddinas",
-        "enabled": false,
-        "complete": "2020-11-18T00:00:00.000Z"
+        "enabled": true,
+        "complete": "2020-12-25T00:00:00.000Z"
     },
     {
         "name": "Clan Citadel",
@@ -61,7 +61,7 @@
         "recompletable": false,
         "location": "Prifddinas",
         "enabled": true,
-        "complete": "2020-11-22T22:30:00.000Z"
+        "complete": "2020-12-20T22:30:00.000Z"
     },
     {
         "name": "Solomon's Store Freebie",
@@ -77,7 +77,7 @@
         "recompletable": false,
         "location": "Ardougne",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-26T00:00:00.000Z"
     },
     {
         "name": "Buying Bandit Duty Free",
@@ -85,7 +85,7 @@
         "recompletable": false,
         "location": "Bandit Camp",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-25T00:00:00.000Z"
     },
     {
         "name": "Buying Runes",
@@ -94,13 +94,13 @@
         "subtasks": [
             {
                 "location": "Edgeville",
-                "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "enabled": false,
+                "complete": "2020-12-25T00:00:00.000Z"
             },
             {
                 "location": "Mage Arena",
                 "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "complete": "2020-12-25T00:00:00.000Z"
             },
             {
                 "location": "Burthorpe",
@@ -115,7 +115,7 @@
             {
                 "location": "Al Kharid",
                 "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "complete": "2020-12-26T00:00:00.000Z"
             },
             {
                 "location": "Port Sarim",
@@ -124,23 +124,23 @@
             },
             {
                 "location": "Void Knight Outpost",
-                "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "enabled": false,
+                "complete": "2020-12-25T00:00:00.000Z"
             },
             {
                 "location": "Yanille",
                 "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "complete": "2020-12-26T00:00:00.000Z"
             },
             {
                 "location": "Lunar Isle",
                 "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "complete": "2020-12-26T00:00:00.000Z"
             },
             {
                 "location": "Ape Atoll",
-                "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "enabled": false,
+                "complete": "2020-12-25T00:00:00.000Z"
             },
             {
                 "location": "Anachronia",
@@ -156,7 +156,7 @@
         "recompletable": false,
         "location": "Oo'glog",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-25T00:00:00.000Z"
     },
     {
         "name": "Buying Feathers",
@@ -223,11 +223,11 @@
     },
     {
         "name": "Buying Feathers of Maat",
-        "interval": "1Day",
+        "interval": "20Hour",
         "recompletable": true,
         "location": "Menaphos",
         "enabled": true,
-        "complete": "2020-12-01T21:55:38.094Z"
+        "complete": "2020-12-25T09:57:29.866Z"
     },
     {
         "name": "Buying Vials of Water and Bomb Vials",
@@ -237,17 +237,17 @@
             {
                 "location": "Taverly",
                 "enabled": true,
-                "complete": "2020-12-07T14:33:35.517Z"
+                "complete": "2020-12-30T22:30:04.008Z"
             },
             {
                 "location": "Prifddinas",
                 "enabled": true,
-                "complete": "2020-12-07T14:07:58.957Z"
+                "complete": "2020-12-30T22:27:00.320Z"
             },
             {
                 "location": "Shilo Village",
-                "enabled": true,
-                "complete": "2020-12-07T14:34:53.444Z"
+                "enabled": false,
+                "complete": "2020-12-30T22:28:41.904Z"
             }
         ],
         "enabled": true
@@ -297,7 +297,7 @@
         "recompletable": true,
         "location": "Miscellania",
         "enabled": true,
-        "complete": "2020-12-03T10:25:28.189Z"
+        "complete": "2020-12-25T16:23:33.212Z"
     },
     {
         "name": "Farming Grapevines",
@@ -333,7 +333,7 @@
         "recompletable": false,
         "location": "Wilderness Herb Patch",
         "enabled": true,
-        "complete": "2020-12-01T06:15:48.480Z"
+        "complete": "2020-12-25T00:39:16.413Z"
     },
     {
         "name": "Farming Spirit Weed",
@@ -343,32 +343,32 @@
             {
                 "location": "Tollheim",
                 "enabled": true,
-                "complete": "2020-12-01T06:15:47.408Z"
+                "complete": "2020-12-25T00:39:15.549Z"
             },
             {
                 "location": "Falador",
                 "enabled": true,
-                "complete": "2020-12-01T06:15:44.080Z"
+                "complete": "2020-12-25T00:39:05.981Z"
             },
             {
                 "location": "Canifis",
                 "enabled": true,
-                "complete": "2020-12-01T06:15:42.336Z"
+                "complete": "2020-12-25T00:38:55.078Z"
             },
             {
                 "location": "Ardougne",
                 "enabled": true,
-                "complete": "2020-12-01T06:15:40.448Z"
+                "complete": "2020-12-25T00:38:53.622Z"
             },
             {
                 "location": "Catherby",
                 "enabled": true,
-                "complete": "2020-12-01T06:15:43.544Z"
+                "complete": "2020-12-25T00:38:55.678Z"
             },
             {
                 "location": "Prifddinas",
                 "enabled": true,
-                "complete": "2020-12-01T06:15:46.040Z"
+                "complete": "2020-12-25T00:39:13.406Z"
             },
             {
                 "location": "Wilderness Herb Patch",
@@ -499,7 +499,7 @@
         "recompletable": true,
         "location": "Ardougne",
         "enabled": true,
-        "complete": "2020-12-02T02:57:46.519Z"
+        "complete": "2020-12-25T17:44:25.655Z"
     },
     {
         "name": "Wicked Hood",
@@ -507,7 +507,7 @@
         "recompletable": false,
         "location": "Edgeville",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-25T00:00:00.000Z"
     },
     {
         "name": "Making Potion Flasks",
@@ -517,12 +517,12 @@
             {
                 "location": "Oo'glog",
                 "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "complete": "2020-12-25T00:00:00.000Z"
             },
             {
                 "location": "Prifddinas",
                 "enabled": true,
-                "complete": "2020-12-02T00:00:00.000Z"
+                "complete": "2020-12-25T00:00:00.000Z"
             }
         ],
         "enabled": true
@@ -533,7 +533,7 @@
         "recompletable": false,
         "location": "Taverly",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-30T00:00:00.000Z"
     },
     {
         "name": "Circus",
@@ -541,7 +541,7 @@
         "recompletable": false,
         "location": "Any",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-30T00:00:00.000Z"
     },
     {
         "name": "Agoroth",
@@ -549,7 +549,7 @@
         "recompletable": false,
         "location": "Ashdale",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-30T00:00:00.000Z"
     },
     {
         "name": "Tears of Guthix",
@@ -557,7 +557,7 @@
         "recompletable": false,
         "location": "Juna's Cavern",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-30T00:00:00.000Z"
     },
     {
         "name": "Herby Werby",
@@ -565,7 +565,7 @@
         "recompletable": false,
         "location": "Anachronia",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-30T00:00:00.000Z"
     },
     {
         "name": "Meg",
@@ -573,7 +573,7 @@
         "recompletable": false,
         "location": "Port Sarim",
         "enabled": true,
-        "complete": "2020-12-02T00:00:00.000Z"
+        "complete": "2020-12-30T00:00:00.000Z"
     },
     {
         "name": "Giant Oyster",
@@ -681,6 +681,14 @@
         "complete": "0"
     },
     {
+        "name": "Shattered Worlds",
+        "interval": "WeeklyReset",
+        "recompletable": false,
+        "location": "Lumbridge",
+        "enabled": false,
+        "complete": "0"
+    },
+    {
         "name": "Recharging Rings of Wealth",
         "interval": "1Day",
         "recompletable": true,
@@ -771,22 +779,22 @@
         "subtasks": [
             {
                 "location": "Pirate Hideout",
-                "enabled": false,
+                "enabled": true,
                 "complete": "0"
             },
             {
                 "location": "Demonic Ruins",
-                "enabled": false,
+                "enabled": true,
                 "complete": "0"
             },
             {
                 "location": "Chaos Temple",
-                "enabled": false,
+                "enabled": true,
                 "complete": "0"
             },
             {
                 "location": "Ardougne",
-                "enabled": false,
+                "enabled": true,
                 "complete": "0"
             },
             {
@@ -801,12 +809,12 @@
             },
             {
                 "location": "Darkmeyer",
-                "enabled": false,
+                "enabled": true,
                 "complete": "0"
             },
             {
                 "location": "Prifddinas",
-                "enabled": false,
+                "enabled": true,
                 "complete": "0"
             }
         ],
@@ -818,6 +826,22 @@
         "recompletable": false,
         "location": "Any",
         "enabled": true,
-        "complete": "2020-12-02T04:47:56.059Z"
+        "complete": "2020-12-25T00:00:00.000Z"
+    },
+    {
+        "name": "Guthixian Butterflies",
+        "interval": "DailyReset",
+        "recompletable": false,
+        "location": "Any",
+        "enabled": true,
+        "complete": "2020-12-25T00:00:00.000Z"
+    },
+    {
+        "name": "Archaeology Research",
+        "interval": "1Day",
+        "recompletable": true,
+        "location": "Digsite",
+        "enabled": true,
+        "complete": "2020-12-25T00:00:00.000Z"
     }
 ]
